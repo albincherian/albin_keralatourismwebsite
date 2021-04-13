@@ -62,61 +62,76 @@
    
 
     <!-- Sign Up Form -->
-    <form action="foundation.html" onsubmit="return validate()" >
+    <form action="login.html" onsubmit="return!! (validateEmail() & validatePhone() & passwordstrength())" >
+      <div class="assign">
         
-        <h2 style="color: blue;">User Sign up</h2>
+        <h2 style="color: black;">User Sign Up</h2>
         <br>
-        <label for="email" style="color: green;">Email</label>
+        <label for="email" style="color:white;">Email</label>
         <br>
-        <input type="text" placeholder="email" id="email">
+        <input type="text" placeholder="email" id="email" required>
         <br>
         <label for="error" id="error"></label>
         <br>
         
-        <label for="password" style="color: green;">Password</label>
+
+
+        <label for="password" style="color:white;">Create a Password</label>
         <br>
-        <input type="password" placeholder="password" id="pwd">
+        <span id="strength"></span>
+        <input type="password" placeholder="password" id="password" required onkeyup="return passwordstrength();"> 
         <br>
-        <p style="color: red;">Minimum 8 characters, at least one uppercase,
-          and one lower case, 
-          at least one number and special character</P>
-        <label for="error1" id="error1"></label>        
-  
-        <label for="phonenumber" style="color: green;">Phone Number</label>
+        <div class="matter">
+        <ul style="color: yellow;">
+          <li> Minimum 8 characters</li>
+          <li> Atleast one uppercase and a lower case</li>
+          <li> Atleast one number and a special character</li>
+        </ul>
+      </div>
+
+
+        <label for="phonenumber" style="color:white;">Phone Number</label>
         <br>
-        <input type="number" placeholder="phonenumber" id="phonenumber">
+        <input type="text" placeholder="phonenumber" id="phonenumber" required>
         <br>
         <label for="error2" id="error2"></label> 
         <br>
         
+
+
+
         <label for="address" style="color: white;" >Address</label>
         <br>
-        <input type="text" placeholder="Address">
+        <input type="text" placeholder="Address" required>
         <br>
         <p></p>
           
         <label for="city" style="color: white;">City</label>
         <br>
-        <input type="text" placeholder="City">
+        <input type="text" placeholder="City" required>
         <br>
         <p></p>
         
         
         <label for="state" style="color: white;">State</label>
         <br>
-        <input type="text" placeholder="State">
+        <input type="text" placeholder="State" required>
         
         <br>
         <p></p>
         
         <label for="pincode" style="color: white;">Pin Code</label>
         <br>
-        <input type="number" placeholder="Pin">
+        <input type="number" placeholder="Pin" required>
         <p></p>
 
         <br>
         <input type="submit" value="SignUp" style="background-color: aqua;">    
         <br>
+        <div class="sty">
+        <br><a href="./login.html" style="text-decoration: none;">Already have an account?</a> 
+      </div>
+      </div>
     </form>
     
       
@@ -124,6 +139,7 @@
     <!-- sign up form ends here -->
 
     <script src="form.js"></script>
+
 
 
     

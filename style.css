@@ -177,3 +177,23 @@ footer{
     text-align: center;
     color: darkgreen;
 }
+
+.assign{
+    padding: 1%;
+    border: 3px solid darkblue;
+    background-color: darkcyan;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 38%;
+    margin-right: 38%;
+    text-align: center;
+    
+}
+
+.matter{
+    text-align: left;
+}
+
+.sty a{
+    color: black;
+}
