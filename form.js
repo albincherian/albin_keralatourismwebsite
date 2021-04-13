@@ -9,8 +9,7 @@ function validateEmail(){
     }
 
     else{
-        error.innerHTML ="Invalid";
-        error.style.color = "red";
+        alert("Email Id is not valid");
         return false;
     }
 }

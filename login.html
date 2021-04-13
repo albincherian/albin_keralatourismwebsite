@@ -60,21 +60,24 @@
     <!-- navbar ends here -->
 
      <!-- Login Form -->
-     <form action="#" class="login">
+     <form action="index.html" class="login" onsubmit="return!! ( emailValidation() & passwordValidation())">
         <h2>User Login</h2>
         <br>
         
         <div class="login-cont">
-            <label>Email</label>
+            <label for="email">Email</label>
             <br>
-            <input type="text" placeholder="Email">
+            <input type="text" placeholder="email" id="mail" required>
+            <label for="err" id="err"></label>
         </div>
         <br>
         
         <div class="login-cont">
-            <label>Password</label>
+            <label for="password">Password</label>
             <br>
-            <input type="password" placeholder="Password">
+            <span id="str"></span>
+            <input type="password" placeholder="Password" id="pass" required onkeyup="passwordValidation();">
+            <label for="err1" id="err1"></label>
         </div>
         <br>
         
@@ -88,6 +91,8 @@
             <a href="./signup.html">Sign Up </a>
         </div>
     </form>
+
+    <script src="./loginform.js"></script>
 
     <!-- Login form ends here -->
 
